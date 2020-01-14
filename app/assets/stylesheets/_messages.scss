@@ -29,12 +29,12 @@
           width: 60px;
           display: flex;
           justify-content: flex-end;
+          &__new-group{
+            color: white;
+          }
           &__edit-user{
             color: white;
             margin-right: 5px;
-          }
-          &__new-group{
-            color: white;
           }
         }
       }
