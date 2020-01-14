@@ -1,14 +1,15 @@
 .side-bar
   .side-header
     .side-header__box
-      %p.side-header__box__username masa
+      %p.side-header__box__username
+        = current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__menu__edit-user
           =link_to "#", class:"side-header__box__menu__edit-user"  do
             =icon('fas', 'edit')
             %span<>
         %li.side-header__box__menu__new-group
-          =link_to "#", class:"side-header__box__menu__new-group" do
+          =link_to edit_user_path(current_user), class:"side-header__box__menu__new-group" do
             =icon('fas', 'cog')
             %span<>
   .side-groups
