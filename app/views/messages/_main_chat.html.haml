@@ -9,4 +9,21 @@
     =link_to "#", class: "main-header__edit-btn" do
       .main-header__edit-btn Edit
   .messages
+    .message
+      .message__upper-info
+        .message__upper-info__name masa
+        .message__upper-info__date 2019/11/20(Wed) 17:43:34
+      .message__text おはよう！
+    .message
+      .message__upper-info
+        .message__upper-info__name masa
+        .message__upper-info__date 2019/11/20(Wed) 17:43:34
+      .message__text おはよう！
   .form
+    %form.new_message
+      .input-box
+        %input.input-box__text{:placeholder => "type a message"}
+        %label.input-box__image
+          =icon('far','image')
+          %input.input-box__image__file{type: "file"}
+      %input.input-box__send-btn{type: "submit", value:"SEND"}
