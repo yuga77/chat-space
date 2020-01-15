@@ -13,9 +13,10 @@
             =icon('fas', 'cog')
             %span<>
   .side-groups
-    .group
-      .group__group-name techcamp
-      .group__latest-message まだメッセージがありません
-    .group
-      .group__group-name techcamp
-      .group__latest-message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#" do
+          .group__group-name
+            = group.name
+          .group__latest-message
+            まだメッセージがありません
