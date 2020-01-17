@@ -1,9 +1,9 @@
 $(function(){
   function bulidHTML(message){
-    if ( message.image){
+    if ( message.image ){
       var html = 
         `<div class="message" data-message-id=${message.id}>
-          <div class="message__upper-info"
+          <div class="message__upper-info">
             <div class="message__upper-info__name">
               ${message.user_name}
             </div>
@@ -11,31 +11,31 @@ $(function(){
               ${message.created_at}
             </div>
           </div>
-            <div class="message__text">
-              <p class="lower-message__content">
-                ${message.content}
-              </p>
-            </div>
-            <img src=${message.image} >
-        </div>`
-      return html;
-    } else {
-      var html =
-        `<div class="message" data-message-id=${message.id}>
-          <div class="message__upper-info"
-            <div class="message__upper-info__name">
-              ${message.user_name}
-            </div>
-            <div class="message__upper-info__date">
-             ${message.created_at}
-            </div>
-          </div>
           <div class="message__text">
             <p class="lower-message__content">
               ${message.content}
             </p>
           </div>
+          <img src=${message.image} >
         </div>`
+      return html;
+    } else {
+      var html =
+        `<div class="message" data-message-id=${message.id}>
+            <div class="message__upper-info">
+              <div class="message__upper-info__name">
+                ${message.user_name}
+             </div>
+             <div class="message__upper-info__date">
+               ${message.created_at}
+             </div>
+            </div>
+            <div class="message__text">
+             <p class="lower-message__content">
+               ${message.content}
+             </p>
+           </div>
+         </div>`
       return html;
     };
   }
